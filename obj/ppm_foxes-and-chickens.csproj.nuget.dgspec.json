@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj": {}
+  },
+  "projects": {
+    "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj",
+        "projectName": "ppm_foxes-and-chickens",
+        "projectPath": "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj",
+        "packagesPath": "C:\\Users\\arti-\\.nuget\\packages\\",
+        "outputPath": "F:\\ООП\\ppm_foxes-and-chickens\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arti-\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "BenMakesGames.PlayPlayMini": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "MonoGame.Content.Builder.Task": {
+              "target": "Package",
+              "version": "[3.8.1.303, )"
+            },
+            "MonoGame.Framework.DesktopGL": {
+              "target": "Package",
+              "version": "[3.8.1.303, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
