@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/siml/projects/csharp/foxes-and-chickens/Content/cell.png","/home/siml/projects/csharp/foxes-and-chickens/Content/bin/DesktopGL/Content/cell.xnb","TextureProcessor","Texture2DContent",32992,16469,0.3786493
+"/home/siml/projects/csharp/foxes-and-chickens/Content/chicken.png","/home/siml/projects/csharp/foxes-and-chickens/Content/bin/DesktopGL/Content/chicken.xnb","TextureProcessor","Texture2DContent",24476,16469,0.0139637
+"/home/siml/projects/csharp/foxes-and-chickens/Content/fox.png","/home/siml/projects/csharp/foxes-and-chickens/Content/bin/DesktopGL/Content/fox.xnb","TextureProcessor","Texture2DContent",39888,401493,0.0612722

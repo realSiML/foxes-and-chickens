@@ -6,11 +6,12 @@ namespace ppm_foxes_and_chickens.Services;
 [AutoRegister(Lifetime.Singleton)]
 public sealed class ChickenFactory
 {
-    public Chicken CreateChicken(Vector2 position)
+    public Chicken CreateChicken(Vector2 position, (int, int) index)
     {
         return new Chicken()
         {
-            Position = new Vector2(position.X, position.Y)
+            Position = new Vector2(position.X, position.Y),
+            Index = index,
         };
     }
 }

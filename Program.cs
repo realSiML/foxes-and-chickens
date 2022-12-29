@@ -14,7 +14,7 @@ using ppm_foxes_and_chickens.GameStates;
 var gsmBuilder = new GameStateManagerBuilder();
 
 gsmBuilder
-    .SetWindowSize(1920 / 4, 1920 / 4, 2)
+    .SetWindowSize(1920 / 4, 1920 / 4, 1)
     .SetInitialGameState<Startup>()
 
     // TODO: set a better window title

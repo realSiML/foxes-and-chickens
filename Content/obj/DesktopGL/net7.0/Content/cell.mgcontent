@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>F:/ООП/ppm_foxes-and-chickens/Content/cell.png</SourceFile>
-  <SourceTime>2022-12-28T20:20:42+11:00</SourceTime>
-  <DestFile>F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/Content/cell.xnb</DestFile>
-  <DestTime>2022-12-28T21:06:14+11:00</DestTime>
+  <SourceFile>/home/siml/projects/csharp/foxes-and-chickens/Content/cell.png</SourceFile>
+  <SourceTime>2022-12-29T03:47:25.8992604+11:00</SourceTime>
+  <DestFile>/home/siml/projects/csharp/foxes-and-chickens/Content/bin/DesktopGL/Content/cell.xnb</DestFile>
+  <DestTime>2022-12-29T03:50:16.2281292+11:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T22:44:56+11:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

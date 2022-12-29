@@ -24,9 +24,10 @@ public sealed class Playing : GameState
     private List<Chicken> Chickens { get; }
 
     const int GRID_DIM = 7;
-    const int GRID_MARGIN = 10;
+
     const int ANIMAL_OFFSET = 32;
     readonly int CELL_SIZE = Cell.SIZE;
+    bool isCompTurn;
     bool isMoving;
 
     public Playing(GraphicsManager graphics, GameStateManager gsm, CellFactory cellFactory, MouseManager mouse, FoxFactory foxFactory, ChickenFactory chickenFactory)
@@ -45,6 +46,11 @@ public sealed class Playing : GameState
         CanMoveToCells = new List<Cell>(4);
         Foxes = new List<Fox>(2);
         Chickens = new List<Chicken>(20);
+        isMoving = false;
+        isCompTurn = false;
+
+        var GRID_MARGIN = (Graphics.Width - CELL_SIZE * 7) / 2;
+        if (GRID_MARGIN < 0) GRID_MARGIN = 0;
 
         // Скрытые клетки.
         var IdxsForHidden = new int[] { 0, 1, 5, 6 };
@@ -73,12 +79,12 @@ public sealed class Playing : GameState
 
                 if (i == 2 & (j == 2 || j == 4))
                 {
-                    animal = FoxFactory.CreateFox(new Vector2(cellX + ANIMAL_OFFSET, cellY + ANIMAL_OFFSET));
+                    animal = FoxFactory.CreateFox(new Vector2(cellX + ANIMAL_OFFSET, cellY + ANIMAL_OFFSET), (i, j));
                     Foxes.Add((Fox)animal);
                 }
                 else if (i >= 3)
                 {
-                    animal = ChickenFactory.CreateChicken(new Vector2(cellX + ANIMAL_OFFSET, cellY + ANIMAL_OFFSET));
+                    animal = ChickenFactory.CreateChicken(new Vector2(cellX + ANIMAL_OFFSET, cellY + ANIMAL_OFFSET), (i, j));
                     Chickens.Add((Chicken)animal);
                 }
                 else
@@ -102,7 +108,7 @@ public sealed class Playing : GameState
 
     public override void ActiveInput(GameTime gameTime)
     {
-        if (isMoving) return;
+        if (isMoving || isCompTurn) return;
 
         if (Mouse.LeftClicked)
         {
@@ -131,16 +137,16 @@ public sealed class Playing : GameState
                         // Доступные ходы
                         if (CanMoveToCells.Contains(cell))
                         {
-                            if (SelectedCell.Animal is not null)
+                            var selectedAnimal = SelectedCell.Animal;
+                            if (selectedAnimal is not null)
                             {
-                                // if (SelectedCell.Status == CellStatus.Reached)
-                                //     SelectedCell.Status = CellStatus.Default;
+                                if (SelectedCell.Status == CellStatus.Reached)
+                                    SelectedCell.Status = CellStatus.Default;
 
                                 var newPos = new Vector2(cell.Position.X + ANIMAL_OFFSET, cell.Position.Y + ANIMAL_OFFSET);
-                                SelectedCell.Animal.Position = newPos;
+                                (selectedAnimal.Position, selectedAnimal.Index) = (newPos, (i, j));
 
-                                (SelectedCell.Animal, cell.Animal) = (cell.Animal, SelectedCell.Animal);
-
+                                (SelectedCell.Animal, cell.Animal) = (cell.Animal, selectedAnimal);
 
                             }
                             CancelSelection();
@@ -159,6 +165,8 @@ public sealed class Playing : GameState
                     }
                 }
             }
+
+            isCompTurn = true;
         }
     }
 
@@ -216,9 +224,36 @@ public sealed class Playing : GameState
 
     public override void ActiveUpdate(GameTime gameTime)
     {
-        if (!isMoving) return;
+        MovingLogic();
+        CompLogic();
+    }
 
-        // ? Логика передвижения
+    public void CompLogic()
+    {
+        if (!isCompTurn) return;
+
+        foreach (var fox in Foxes)
+        {
+            MakeQueueFor(fox, new Queue<(int, int)>());
+        }
+
+
+        // * Конец
+        isCompTurn = false;
+    }
+
+    public void MakeQueueFor(Fox fox, Queue<(int, int)> tempQueue)
+    {
+
+    }
+
+    public void MovingLogic()
+    {
+        if (isMoving)
+        {
+
+            // ? Логика передвижения
+        }
     }
 
     public override void AlwaysUpdate(GameTime gameTime)

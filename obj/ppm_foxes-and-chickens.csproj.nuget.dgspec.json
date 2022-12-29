@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj": {}
+    "/home/siml/projects/csharp/foxes-and-chickens/ppm_foxes-and-chickens.csproj": {}
   },
   "projects": {
-    "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj": {
+    "/home/siml/projects/csharp/foxes-and-chickens/ppm_foxes-and-chickens.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj",
+        "projectUniqueName": "/home/siml/projects/csharp/foxes-and-chickens/ppm_foxes-and-chickens.csproj",
         "projectName": "ppm_foxes-and-chickens",
-        "projectPath": "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj",
-        "packagesPath": "C:\\Users\\arti-\\.nuget\\packages\\",
-        "outputPath": "F:\\ООП\\ppm_foxes-and-chickens\\obj\\",
+        "projectPath": "/home/siml/projects/csharp/foxes-and-chickens/ppm_foxes-and-chickens.csproj",
+        "packagesPath": "/home/siml/.nuget/packages/",
+        "outputPath": "/home/siml/projects/csharp/foxes-and-chickens/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\arti-\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/siml/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
