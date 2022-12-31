@@ -4,6 +4,8 @@ public enum CellType
 {
     Common,
     Target,
+    Reached
+
 }
 
 public enum CellStatus
@@ -11,7 +13,6 @@ public enum CellStatus
     Default,
     Selected,
     CanMoveTo,
-    Reached
 }
 
 public sealed class Cell

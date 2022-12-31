@@ -6,9 +6,13 @@
   <SourceFiles>
     <File>F:/ООП/ppm_foxes-and-chickens/Content/cell.png</File>
     <File>F:/ООП/ppm_foxes-and-chickens/Content/chicken.png</File>
+    <File>F:/ООП/ppm_foxes-and-chickens/Content/font-test.png</File>
+    <File>F:/ООП/ppm_foxes-and-chickens/Content/Font.png</File>
     <File>F:/ООП/ppm_foxes-and-chickens/Content/fox.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

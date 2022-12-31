@@ -14,7 +14,7 @@ using ppm_foxes_and_chickens.GameStates;
 var gsmBuilder = new GameStateManagerBuilder();
 
 gsmBuilder
-    .SetWindowSize(1920 / 4, 1920 / 4, 1)
+    .SetWindowSize(1920 / 4, 1920 / 4, 2)
     .SetInitialGameState<Startup>()
 
     // TODO: set a better window title
@@ -23,7 +23,8 @@ gsmBuilder
     // TODO: add any resources needed (refer to PlayPlayMini documentation for more info)
     .AddAssets(new IAsset[]
     {
-        // new FontMeta(...)
+        new FontMeta("Font","Font",11,23),
+        new FontMeta("Test","font-test",33,14),
         // new PictureMeta(...)
         new SpriteSheetMeta("Fox","fox",32,32),
         new SpriteSheetMeta("Chicken","chicken",32,32),
@@ -31,6 +32,7 @@ gsmBuilder
         // new SongMeta(...)
         // new SoundEffectMeta(...)
     })
+
 
     // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices(s =>

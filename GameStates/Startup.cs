@@ -1,6 +1,5 @@
 using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Services;
-using Microsoft.Xna.Framework;
 
 namespace ppm_foxes_and_chickens.GameStates;
 

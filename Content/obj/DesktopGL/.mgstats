@@ -1,2 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"F:/ООП/ppm_foxes-and-chickens/Content/cell.png","F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/cell.xnb","TextureProcessor","Texture2DContent",32992,16469,0,1722231
+"F:/ООП/ppm_foxes-and-chickens/Content/cell.png","F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/cell.xnb","TextureProcessor","Texture2DContent",32992,16469,0,3390291
+"F:/ООП/ppm_foxes-and-chickens/Content/chicken.png","F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/chicken.xnb","TextureProcessor","Texture2DContent",24476,16469,0,0257722
+"F:/ООП/ppm_foxes-and-chickens/Content/font-test.png","F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/font-test.xnb","TextureProcessor","Texture2DContent",995070,496485,0,0603917
+"F:/ООП/ppm_foxes-and-chickens/Content/Font.png","F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/Font.xnb","TextureProcessor","Texture2DContent",4334,131157,0,0191489
+"F:/ООП/ppm_foxes-and-chickens/Content/fox.png","F:/ООП/ppm_foxes-and-chickens/Content/bin/DesktopGL/fox.xnb","TextureProcessor","Texture2DContent",39888,401493,0,0520299
