@@ -12,15 +12,17 @@ public sealed class EndGameMenu : GameState
     private GameState PreviousState { get; }
 
     private string WinOrLoseText { get; }
+    private bool IsHidden { get; set; }
 
     public EndGameMenu(GameStateManager gsm, GraphicsManager graphics, KeyboardManager keyboard, EndGameMenuConfig config)
     {
         GSM = gsm;
         Graphics = graphics;
         Keyboard = keyboard;
-
         PreviousState = config.PreviousState;
+
         WinOrLoseText = config.WinOrLose;
+        IsHidden = false;
     }
 
     public override void AlwaysDraw(GameTime gameTime)
@@ -35,9 +37,12 @@ public sealed class EndGameMenu : GameState
         var windowX = (Graphics.Width - windowWidth) / 2;
         var windowY = (Graphics.Height - windowWidth) / 2;
 
-        Graphics.DrawFilledRectangle(windowX, windowY, windowWidth, windowHeight, Color.White);
-        Graphics.DrawRectangle(windowX, windowY, windowWidth, windowHeight, Color.Black);
-        Graphics.DrawTextWithWordWrap("Font", windowX + 4, windowY + 4, windowWidth - 8, WinOrLoseText + "  R - Retry    Q - Quit", Color.Black);
+        if (!IsHidden)
+        {
+            Graphics.DrawFilledRectangle(windowX, windowY, windowWidth, windowHeight, Color.White);
+            Graphics.DrawRectangle(windowX, windowY, windowWidth, windowHeight, Color.Black);
+            Graphics.DrawTextWithWordWrap("Font", windowX + 4, windowY + 4, windowWidth - 8, WinOrLoseText + "  R - Retry    Q - Quit", Color.Black);
+        }
 
     }
 
@@ -50,6 +55,10 @@ public sealed class EndGameMenu : GameState
         else if (Keyboard.PressedKey(Keys.R))
         {
             GSM.ChangeState(PreviousState);
+        }
+        else if (Keyboard.PressedKey(Keys.H))
+        {
+            IsHidden = IsHidden != true;
         }
     }
 

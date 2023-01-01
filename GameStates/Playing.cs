@@ -98,6 +98,7 @@ public sealed class Playing : GameState
     {
         Foxes = new(2);
         Chickens = new(20);
+        QueueCells = new();
 
         // Скрытые клетки.
         var IdxsForHidden = new int[] { 0, 1, 5, 6 };
@@ -359,12 +360,6 @@ public sealed class Playing : GameState
             }
         }
 
-        foreach (var Fox in Foxes)
-        {
-            System.Console.WriteLine($"fox:{Fox.Index.Item1}, {Fox.Index.Item2}; Queue:{Fox.Queue.Count}");
-        }
-
-        // System.Console.WriteLine($"fox2:{i_2}, {j_2}; Queue:{fox2.Queue.Count}");
         isCompTurn = false;
     }
 
@@ -382,7 +377,12 @@ public sealed class Playing : GameState
                     tempQueue.Enqueue((i, j + k));
                     tempQueue.Enqueue((i, j + 2 * k));
                     fox.Index = (i, j + 2 * k);
+                    var chicken = Cells[i][j + k].Animal;
+                    Cells[i][j + k].Animal = null;
                     MakeQueueFor(fox, new(tempQueue));
+                    Cells[i][j + k].Animal = chicken;
+                    fox.Index = (i, j);
+                    tempQueue = new();
                 }
             // Вертикаль
             if (i + 2 * k < 0 || i + 2 * k >= GRID_DIM || Cells[i + k][j] is null || Cells[i + 2 * k][j] is null) continue;
@@ -391,14 +391,16 @@ public sealed class Playing : GameState
                 tempQueue.Enqueue((i + k, j));
                 tempQueue.Enqueue((i + 2 * k, j));
                 fox.Index = (i + 2 * k, j);
+                var chicken = Cells[i + k][j].Animal;
+                Cells[i + k][j].Animal = null;
                 MakeQueueFor(fox, new(tempQueue));
+                Cells[i + k][j].Animal = chicken;
+                fox.Index = (i, j);
+                tempQueue = new();
             }
         }
 
         if (tempQueue.Count > fox.Queue.Count) fox.Queue = new(tempQueue);
-        fox.Index = (i, j);
-
-        System.Console.WriteLine($"Queue:{fox.Queue.Count}");
 
     }
 
@@ -478,7 +480,6 @@ public sealed class Playing : GameState
             var cell = QueueCells[i];
             Graphics.DrawText("Font", (int)cell.Position.X + (CELL_SIZE - CW) / 2, (int)cell.Position.Y + (CELL_SIZE - CH) / 2, i.ToString(), Color.Black);
         }
-        // (int)(cell.Position.X + CELL_SIZE - CW) / 2, (int)(cell.Position.Y + CELL_SIZE - CH) / 2
 
         foreach (var fox in Foxes)
         {

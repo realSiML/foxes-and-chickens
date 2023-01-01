@@ -24,7 +24,6 @@ gsmBuilder
     .AddAssets(new IAsset[]
     {
         new FontMeta("Font","Font",11,23),
-        new FontMeta("Test","font-test",33,14),
         // new PictureMeta(...)
         new SpriteSheetMeta("Fox","fox",32,32),
         new SpriteSheetMeta("Chicken","chicken",32,32),

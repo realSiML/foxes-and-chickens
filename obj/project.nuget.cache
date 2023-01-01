@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hiyc1VkI6lkanDyaLYVbeIM64WQqN1sO6wsge6dYGS2NIKvNzqe7g9oynnzU8IQD8Ioqnb0Mpp7PcJK2m5Jmuw==",
+  "dgSpecHash": "2xRF/qWcqfx7zOqHO9aEnb4beoTBgxrbwkZm2JQgCjxyfGha/vpINY/rMX8d5m+WqnOcY7HG3RpcDi46OEUCzw==",
   "success": true,
   "projectFilePath": "F:\\ООП\\ppm_foxes-and-chickens\\ppm_foxes-and-chickens.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,10 @@
     "C:\\Users\\arti-\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
     "C:\\Users\\arti-\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\arti-\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\arti-\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\arti-\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\arti-\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.1\\microsoft.netcore.app.runtime.win-x64.7.0.1.nupkg.sha512",
+    "C:\\Users\\arti-\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.1\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.1.nupkg.sha512",
+    "C:\\Users\\arti-\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.1\\microsoft.aspnetcore.app.runtime.win-x64.7.0.1.nupkg.sha512"
   ],
   "logs": []
 }
